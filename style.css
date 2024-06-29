@@ -1,0 +1,217 @@
+/* Custom Declarations */
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 400 600 700;
+    font-display: fallback;
+    font-style: normal;
+}
+
+:root {
+
+    /* Colors */
+    --clr-prim-green: hsl(75, 94%, 57%);
+    --clr-ntrl-white: hsl(0, 0%, 100%);
+    --clr-ntrl-grey: hsl(0, 0%, 20%);
+    --clr-ntrl-darkgrey: hsl(0, 0%, 12%);
+    --clr-ntrl-offblack: hsl(0, 0%, 8%);
+
+    /* Font Specific */
+    --fs-body: 14px;
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+ul, ol {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+  font-weight: normal;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+/* General Styling */
+body {
+    background: hsl(0, 0%, 5%);
+    font-family: 'Inter';
+    font-size: var(--fs-body);
+    color: var(--clr-ntrl-white);
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 72vw;
+    margin-inline: auto;
+    background: var(--clr-ntrl-offblack);
+    align-items: center;
+    /* justify-content: center; */
+    height: 100dvh;
+    margin-bottom: -17px;
+    
+}
+
+.card {
+    text-align: center;
+    width: 333px;
+    margin-inline: auto;
+    background: var(--clr-ntrl-darkgrey);
+    padding: 1.25rem;
+    border-radius: .75rem;
+    box-shadow:-0.05rem 0.05rem var(--clr-ntrl-grey);
+}
+
+.profile-image {
+    border-radius: 50%;
+    margin: auto;
+    max-width: 75px;
+    padding: 1.03rem 0;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.9rem;
+    margin: 0.75rem 0.75rem 1rem;
+}
+
+.grid-item {
+    background: var(--clr-ntrl-grey);
+    color: var(--clr-ntrl-white);
+    font-size: .75rem;
+    font-weight: 500;
+    font-style: bold;
+    padding: .65rem .75rem;
+    margin: 0 0.25rem;
+    border-radius: .35rem;
+    cursor: pointer;
+    box-shadow:-0.05rem 0.05rem var(--clr-ntrl-offblack);
+    
+}
+
+.grid-item:hover, 
+.grid-item:focus {
+    background-color: var(--clr-prim-green);
+    color: black;
+}
+
+/* Text Styling */
+.profile-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-style: bold;
+    margin-top: .5rem;
+}
+
+.profile-location {
+    color: var(--clr-prim-green);
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-style: bold;
+    margin-top: .5rem;
+}
+
+.profile-description {
+    font-size: .75rem;
+    padding: 0.75rem 0.75rem 0.25rem;
+    margin-bottom: 1rem;
+
+}
+
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
