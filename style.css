@@ -142,7 +142,7 @@ body {
     background: var(--clr-ntrl-darkgrey);
     padding: 1.25rem;
     border-radius: .75rem;
-    box-shadow:-0.05rem 0.05rem var(--clr-ntrl-grey);
+    box-shadow: -0.05rem 0.05rem var(--clr-ntrl-grey);
 }
 
 .profile-image {
@@ -178,7 +178,10 @@ body {
 .grid-item:hover, 
 .grid-item:focus {
     background-color: var(--clr-prim-green);
-    color: black;
+    color: var(--clr-ntrl-offblack);
+    transition: 
+    background 0.3s ease, 
+    color 0.3s ease;
 }
 
 /* Text Styling */
